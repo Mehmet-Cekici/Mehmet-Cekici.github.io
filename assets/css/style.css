@@ -157,7 +157,6 @@ a {
 }
 .pt_banner_30{
   padding-top: 35px !important}
-}
 
 
 
@@ -1643,7 +1642,7 @@ label{
 }
 .button-n,
 a {
-    text-decoration: none!important
+    text-decoration: none!important;
     color:#fff !important;
 }
 
@@ -2165,7 +2164,7 @@ ul {
 .pagination-wrap ul li a{
     height: 45px;
     width: 45px;
-    background:#;
+    background:rgb(255, 255, 255);
     line-height: 45px;
     display: block;
     border: 1px solid #4a53dd;
@@ -2600,10 +2599,6 @@ h3.blog-title {
     right: 30px;
     top: 200px;
 }
-.
-
-
-}
 
 /*------------------------------------
 21.Responsive
@@ -2954,3 +2949,4 @@ img.posi-r-img{
 
 
 
+}
