@@ -57,11 +57,11 @@ title: İletişim
                   <div class="left-borders">
 
                      <h5 class="wow fadeInUp main-about_h" data-wow-delay="0.2s"
-                        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">CONTACT AREAS</h5>
+                        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">İLETİŞİM ALANLARI</h5>
                      <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s"
                         style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;"><span
-                           class="c_yellow"> CONTACT AREAS
-                        </span> | ORR <br>AND ITS ATTORNEYS </p>
+                           class="c_yellow"> İLETİŞİM ALANLARI
+                        </span> | VE <br>AVUKATLARIN OFİSLERİ</p>
                   </div>
 
                </div>
@@ -79,26 +79,26 @@ title: İletişim
       <div class="row">
          <div class="col-lg-6">
             <div class="section-heading left">
-               <h4>Let's Talk about Your Business</h4>
+               <h4>İşiniz Hakkında Konuşalım</h4>
             </div>
             <div class="contact-form-box margin-30px-top">
                <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
                <form id="contactForm" method="post" class="contact-form" action="sendemail.php">
                   <div class="row">
                      <div class="col-md-12">
-                        <input type="text" class="medium-input" maxlength="50" placeholder="Name *" required="required"
+                        <input type="text" class="medium-input" maxlength="50" placeholder="İsim *" required="required"
                            id="name" name="name">
                      </div>
                      <div class="col-xs-12 col-sm-6 col-md-6">
-                        <input type="email" class="medium-input" maxlength="70" placeholder="E-mail *"
+                        <input type="email" class="medium-input" maxlength="70" placeholder="E-posta *"
                            required="required" id="email" name="email">
                      </div>
                      <div class="col-xs-12 col-sm-6 col-md-6">
-                        <input type="text" class="medium-input" maxlength="70" placeholder="Subject *"
+                        <input type="text" class="medium-input" maxlength="70" placeholder="Konu *"
                            required="required" id="subject" name="subject">
                      </div>
                      <div class="col-md-12">
-                        <textarea class="medium-textarea" rows="12" maxlength="1000" placeholder="Message *"
+                        <textarea class="medium-textarea" rows="12" maxlength="1000" placeholder="İleti *"
                            required="required" id="message" name="message"></textarea>
                      </div>
                      <div class="col-md-12 sm-margin-30px-bottom">
@@ -106,8 +106,7 @@ title: İletişim
                            style="visibility: visible; animation-name: fadeInRight;">
                            <a type="submit" id="#services" href="#services"
                               class="btn btn-primary wow fadeInUp radius-50" data-wow-delay="0.5s"
-                              style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">Send
-                              Message</a>
+                              style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">E-posta Gönder</a>
                         </div>
                      </div>
                   </div>
@@ -119,10 +118,8 @@ title: İletişim
                <div class="row">
                   <div class="col-12">
                      <div class="contact-info-section no-padding-top margin-10px-top">
-                        <h4>Get in Touch</h4>
-                        <p> Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                           in reprehenderit in voluptate velit esse consequat.</p>
+                        <h4>İletişime Geçin</h4>
+                        <p>{{ site.data.iletisim.iletisime-gecin }}</p>
                      </div>
                   </div>
                   <div class="col-12">
@@ -130,28 +127,27 @@ title: İletişim
                         <h4>Büro</h4>
                         <ul class="list-style-1 no-margin-bottom">
                            <li>
-                              <p><i class="fa fa-phone text-center"></i> <strong>Adres: </strong>Fetih Mh. Aslanlıkışla
-                                 Cd. No:245/7 Kat 4 Karatay/KONYA</p>
+                              <p><i class="fa fa-phone text-center"></i> <strong>Adres: </strong>{{ site.data.iletisim.adres }}</p>
                            </li>
                            <li>
-                              <p><i class="fa fa-globe text-center"></i> <strong>Telefon: </strong>(+90) 533 969 32 18
+                              <p><i class="fa fa-globe text-center"></i> <strong>Telefon: </strong>{{ site.data.iletisim.telefon }}
                               </p>
                            </li>
                            <li>
                               <p><i class="fa fa-envelope text-center"></i> <strong>E-posta:</strong> <a
-                                    href="javascript:void(0)" class="email_color_site">bilgi@mehmetcekici.av.tr</a></p>
+                                    href="javascript:void(0)" class="email_color_site">{{ site.data.iletisim.e-posta }}</a></p>
                            </li>
                         </ul>
                      </div>
                   </div>
                   <div class="col-12">
                      <div class="contact-info-section border-none no-padding-bottom no-margin-bottom">
-                        <h4>Business Hours</h4>
+                        <h4>Ofis Saatleri</h4>
                         <ul class="list-style-2">
-                           <li>Monday - Friday - 9am to 5pm</li>
-                           <li>Saturday - 9am to 2pm</li>
-                           <li>Sunday - Closed</li>
-                        </ul>
+                           {% for saat in site.data.iletisim.ofis-saatleri %}
+                             <li>{{ saat }}</li>
+                           {% endfor %}
+                         </ul>
                      </div>
                   </div>
                </div>
@@ -184,29 +180,4 @@ title: İletişim
 <!--#End contact-text  -->
 <!--#start Our testimonial Area -->
 
-<div class="our_partners_area bg_gradient_team">
-   <div class="book_now_aera ">
-      <div class="container">
-         <div class="row book_now">
-            <div class="col-md-7 booking_text">
-               <h4>Lorem Ipsum is simply dummy text of the printing and<br> typesetting industry.
-               </h4>
-               <p>Get started for free to see who your customers are, what they do and what keeps them coming back.</p>
-            </div>
-            <div class="col-md-5 p0 book_bottun">
-               <div class="col-md-5">
-               </div>
-               <div class="col-md-7">
-                  <div class="top-banner wow fadeInRight text-left"
-                     style="visibility: visible; animation-name: fadeInRight;">
-                     <a id="#services" href="iletisim.html"
-                        class="btn btn-primary radius-50  wow fadeInUp  js-scroll-trigger" data-wow-delay="0.5s"
-                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">Free
-                        Consultation</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+{% include book_now.html %}
